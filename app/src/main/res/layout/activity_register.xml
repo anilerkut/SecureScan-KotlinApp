@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mainBlue"
+    android:orientation="vertical"
+    tools:context=".RegisterActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@drawable/login_register_white_background">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="65dp"
+                    android:src="@drawable/icon">
+                </ImageView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/blackopsone_reg"
+                    android:text="SecureScan"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="38dp"></TextView>
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:text="Register"
+            android:fontFamily="@font/domine_variable"
+            android:textColor="@color/white"
+            android:textSize="40dp"
+            android:textStyle="bold"></TextView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="50dp"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7dp"
+                android:fontFamily="@font/domine_variable"
+                android:text="Username"
+                android:textColor="@color/white"></TextView>
+
+            <EditText
+                android:id="@+id/usernameRegisterEditText"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/edittext_background"
+                android:hint="Enter Your Username..."
+                android:fontFamily="@font/domine_variable"
+                android:textSize="17dp"
+                android:paddingStart="30dp"
+                android:textColor="@color/black"></EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="50dp"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7dp"
+                android:text="Email"
+                android:fontFamily="@font/domine_variable"
+                android:textColor="@color/white"></TextView>
+
+            <EditText
+                android:id="@+id/emailRegisterEditText"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/edittext_background"
+                android:hint="Enter Your Email..."
+                android:fontFamily="@font/domine_variable"
+                android:textSize="17dp"
+                android:paddingStart="30dp"
+                android:textColor="@color/black"></EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="50dp"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7dp"
+                android:text="Password"
+                android:fontFamily="@font/domine_variable"
+                android:textColor="@color/white"></TextView>
+
+            <EditText
+                android:id="@+id/passwordRegisterEditText"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/edittext_background"
+                android:hint="Enter Your Password..."
+                android:inputType="textPassword"
+                android:fontFamily="@font/domine_variable"
+                android:textSize="17dp"
+                android:paddingStart="30dp"
+                android:textColor="@color/black"></EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="50dp"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7dp"
+                android:text="Password Again"
+                android:fontFamily="@font/domine_variable"
+                android:textColor="@color/white"></TextView>
+
+            <EditText
+                android:id="@+id/passwordAgainRegisterEditText"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/edittext_background"
+                android:hint="Enter Your Password Again..."
+                android:inputType="textPassword"
+                android:fontFamily="@font/domine_variable"
+                android:textSize="17dp"
+                android:paddingStart="30dp"
+                android:textColor="@color/black"></EditText>
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/registerButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="130dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/url_button"
+            android:elevation="10dp"
+            android:text="regıster"
+            android:textColor="@color/white"></androidx.appcompat.widget.AppCompatButton>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingBottom="15dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="15dp"
+                android:fontFamily="@font/domine_variable"
+                android:text="Already have an account?">
+            </TextView>
+            <TextView
+                android:id="@+id/alreadyAccountTextButton"
+                android:clickable="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:fontFamily="@font/domine_variable"
+                android:textSize="16dp"
+                android:layout_marginLeft="3dp"
+                android:text="Sign In"
+                android:textStyle="bold">
+            </TextView>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
