@@ -57,9 +57,9 @@ class LoginActivity : AppCompatActivity() {
 
     fun checkUser()
     {
-        var userEmail : String = editTextLoginEmail.text.toString()
-        var userPassword : String = editTextLoginPassword.text.toString()
-        var jsonObject = JsonObject()
+        val userEmail : String = editTextLoginEmail.text.toString()
+        val userPassword : String = editTextLoginPassword.text.toString()
+        val jsonObject = JsonObject()
         jsonObject.addProperty("email",userEmail)
         jsonObject.addProperty("password",userPassword)
         dangerService.login(jsonObject).enqueue(object : Callback<LoginInfo>{
@@ -68,10 +68,13 @@ class LoginActivity : AppCompatActivity() {
                 if(logResponse!=null){
                     if(logResponse.status=="OK"){
                         Toast.makeText(applicationContext,logResponse.message, Toast.LENGTH_LONG).show()
-                        var userToken = logResponse.result.token
-                        var mainIntent = Intent(applicationContext,MainActivity::class.java)
+                        val userToken = logResponse.result.token
+                        val userLoginEmail = logResponse.result.email
+                        val username = logResponse.result.username
+                        val mainIntent = Intent(applicationContext,MainActivity::class.java)
                         mainIntent.putExtra("token",userToken)
-                        mainIntent.putExtra("email",userEmail)
+                        mainIntent.putExtra("email",userLoginEmail)
+                        mainIntent.putExtra("username",username)
                         startActivity(mainIntent)
                     }
                     else{
@@ -84,7 +87,6 @@ class LoginActivity : AppCompatActivity() {
                 Toast.makeText(applicationContext,"Something went wrong", Toast.LENGTH_LONG).show()
             }
         })
-
         editTextLoginEmail.text.clear()
         editTextLoginPassword.text.clear()
     }
